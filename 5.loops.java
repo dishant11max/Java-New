@@ -2,24 +2,24 @@
     public static void main(String[] args) {
         // java program implementing loops
         // while loop
-        // int i =1;
-        // while (i<=5) {
-        //     System.out.println("hello "+i);
-        //     int j = 1;
-        //     while(j<=3){
-        //         System.out.println("hry "+j);
-        //         j++;
-        //     }
-        //     i++;
-        // }
+        int i =1;
+        while (i<=5) {
+            System.out.println("hello "+i);
+            int j = 1;
+            while(j<=3){
+                System.out.println("hry "+j);
+                j++;
+            }
+            i++;
+        }
 
         // do-while loop
-        // int j=1;
-        // do{
-        //     System.out.println("hello "+j);
-        //     j++;
-        // }
-        // while(j<=4);
+        int j=1;
+        do{
+            System.out.println("hello "+j);
+            j++;
+        }
+        while(j<=4);
 
 
         // for loop
