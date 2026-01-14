@@ -1,29 +1,30 @@
-class A{
-     public void show(){
-            System.out.println("in A");
-        }
-
-   class B{
-        public void config(){
-            System.out.println("in B");
-        }
-    }
+abstract class A {
+    public abstract void show();
+     public abstract void config();
 }
+// class B extends A{
+// public void show(){
+// System.out.println("hello there mate!");
+// }
+// }
+// why to use the the above class when we can use inner class
 
 public class innerClass {
     public static void main(String[] args) {
-        A obj = new A()
-        // anonymous inner class
+        A obj = new A() 
         {
-            public void show()
+            public void show() 
             {
-                System.out.println("In C");
+                System.out.println("hello there mate!");
+            }
+            public void config(){
+                System.out.println("In Config File");
             }
         };
+
         obj.show();
-
-
-        // A.B obj2 = obj.new B ();
-        // obj2.config();
+        obj.config();
     }
 }
+
+// use of abstract and inner class together program implementation
