@@ -1,17 +1,28 @@
-import java.util.HashMap;
-import java.util.Map;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 
 public class collectionApi {
+
     public static void main(String[] args) {
-        Map<String, Integer> students = new HashMap<String, Integer>();
-        students.put("Dishy", 99);
-        students.put("Sahil", 32);
-        students.put("Subasis", 98);
-        students.put("Himashu", 49);
-         students.put("Sahil", 94);
-        for(String studs : students.keySet()){
-            System.out.println(studs + ":" + students.get(studs));
-        }
-        System.out.println(students);
+
+        Comparator<Integer> com = new Comparator<Integer>()
+         {
+            public int compare(Integer i, Integer j)
+             {
+                if (i % 10 > j % 10) {
+                    return 1;
+                } else
+                    return -1;
+            }
+        };
+        List<Integer> nums = new ArrayList<>();
+        nums.add(25);
+        nums.add(24);
+        nums.add(91);
+        nums.add(22);
+        Collections.sort(nums, com);
+        System.out.println(nums);
     }
 }
